@@ -9,9 +9,14 @@
 </head>
 <body>
 
-	<div th:replace="~{menu :: menu}"></div>
-	<div class="container">
-		<h1>Bem-vindo a nossa aplicação</h1>
-	</div>
+	<nav th:fragment="menu">
+		<div class="nav-wrapper container">
+			<a href="#" class="brand-logo">Atividades</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="/">Home</a></li>
+				<li><a href="/eventos/form">Adicionar</a></li>
+			</ul>
+		</div>
+	</nav>
 </body>
 </html>
