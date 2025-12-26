@@ -45,5 +45,12 @@ public class Eventos {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	@Override
+	public String toString() {
+		return "Eventos [id=" + id + ", nome=" + nome + ", local=" + local + ", data=" + data + ", horario=" + horario
+				+ "]";
+	}
+	
+	
 
 }
