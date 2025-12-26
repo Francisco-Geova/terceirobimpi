@@ -14,27 +14,28 @@
 		<h1>Lista de Eventos</h1>
 
 		<table>
-		
-		<thead>
-		<tr>
-		<th>ID</th>
-		<th>Nome</th>
-		<th>Local</th>
-		<th>Data</th>
-		<th>Horário</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr th:each="e : ${eventos}">
-		<td th:text="${e.id}"></td>
-		<td th:text="${e.nome}"></td>
-		<td th:text="${e.local}"></td>
-		<td th:text="${e.data}"></td>
-		<td th:text="${e.horario}"></td>
-		</tr>
-		</tbody>
+
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nome</th>
+					<th>Local</th>
+					<th>Data</th>
+					<th>Horário</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="e : ${Eventos}">
+					<td th:text="${e.id}">1</td>
+					<td><a th:href="@{/eventos/{id}(id=${e.id})}"><span
+							th:text="${e.nome}">Férias</span></a></td>
+					<td th:text="${e.local}">Minha Casa</td>
+					<td th:text="${e.data}">27/12</td>
+					<td th:text="${e.horario}">00:00</td>
+				</tr>
+			</tbody>
 		</table>
-		
+
 	</div>
 </body>
 </html>
