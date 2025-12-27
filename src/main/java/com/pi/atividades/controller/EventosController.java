@@ -16,6 +16,7 @@ import com.pi.atividades.models.Eventos;
 import com.pi.atividades.repositories.ConvidadoRepository;
 import com.pi.atividades.repositories.EventosRepository;
 
+
 @Controller
 @RequestMapping("/eventos")
 public class EventosController {
@@ -58,6 +59,9 @@ public class EventosController {
 		md.setViewName("eventos/detalhes");
 		Eventos eventos = opt.get();
 		md.addObject("eventos", eventos);
+		
+		List<Convidados> convidado = cr.findByEventos(eventos);
+		md.addObject("convidados", convidado);
 		return md;
 
 	}
